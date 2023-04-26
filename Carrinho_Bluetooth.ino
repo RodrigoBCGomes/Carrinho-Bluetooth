@@ -27,5 +27,14 @@ void setup() {
 }
 
 void loop() {
+  if (Serial.avaiable)()){
+    t = Serial.read();
 
+    if(t == "F"){
+      digitalWrite(IN1,HIGH);
+      digitalWrite(IN2,LOW);
+      digitalWrite(IN3,LOW);
+      digitalWrite(IN4,HIGH);
+    }
+  }
 }
